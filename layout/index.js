@@ -4,6 +4,7 @@ import gsap from "gsap"
 import CustomHead from 'components/custom-head'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import Header from "components/header"
+import Preloader from "components/preloader"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -61,6 +62,7 @@ export default function Layout({ children, seo="" }) {
 					<CustomHead {...seo} />
 					<div className="{cn(s.layout, className)}">
 						{/* preloader */}
+						<Preloader />
 						{/* <Cursor /> */}
 						<div className="main__container">
 							<Header />

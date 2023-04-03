@@ -10,7 +10,7 @@ export default function Header ({}) {
                 <div className={cn(s.header__logo)} translate="no">
                     <a href="https://vendomeclinique.com/">
                         <svg width="40" height="114" viewBox="0 0 40 114" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip-header-vertical)">
+                            <g clipPath="url(#clip-header-vertical)">
                                 <path d="M23.4234 103.687L5.57494 109.118L5.46143 109.153L5.46143 113.548L27.4086 106.368L27.4086 104.044L5.46143 97.7267L5.46143 98.6472L23.4234 103.687Z" fill="black"></path>
                                 <path d="M27.4084 97.1513L27.4084 84.9427L26.7158 84.9427L26.7158 93.1124L16.202 93.1124L16.202 86.0358L15.5775 86.0358L15.5775 93.1124L6.15376 93.1124L6.15376 84.9427L5.46118 84.9427L5.46118 97.1513L27.4084 97.1513Z" fill="black"></path>
                                 <path d="M22.583 71.7674L5.46118 80.2826L5.46118 84.3213L27.4084 84.3213L27.4084 83.5389L7.91363 83.5389L27.3176 73.5626L27.4084 73.5165L27.4084 70.9849L5.46118 70.9849L5.46118 71.7674L22.583 71.7674Z" fill="black"></path>

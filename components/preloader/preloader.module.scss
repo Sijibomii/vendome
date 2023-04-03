@@ -1,0 +1,110 @@
+@import 'styles/_functions';
+
+.preloader{
+    @include desktop{
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 0;
+        height: calc(var(--vh)*100);
+        color: var(white);
+    }
+}
+
+.preloader__wrap{
+    @include desktop{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+    }
+}
+
+.preloader__logo{
+    @include desktop{
+        margin-top: -3.75rem;
+    }
+}
+
+.preloader__text{
+    @include desktop{
+        align-self: center;
+        color: white;
+        margin-top: 5rem;
+        position: absolute;
+        top: 70%;
+        font-size: 3rem;
+    }
+}
+
+.ended{
+    @include desktop{
+        .preloader{
+            display: none;
+        }
+    }
+}
+
+.preloader__images__display{
+    @include desktop{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.preloader__images__display__wrap{
+    @include desktop{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        position: relative;
+    }
+}
+
+.preloader__image{
+    @include desktop{
+        position: absolute;
+        width: 20rem;
+        height: 30rem;
+        margin-left: 1rem;
+        left: 35%;
+    }
+}
+
+.preloader__image__container{
+    @include desktop{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.preloader__image__media{
+    @include desktop{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.preloader__image__left{
+    @include desktop{
+        transform: rotate(15deg);
+       
+    }
+}
+
+.preloader__image__right{
+    @include desktop{
+        transform: rotate(-15deg);
+        
+    }
+}

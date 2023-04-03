@@ -69,3 +69,13 @@ window.addEventListener("load", function () {
 
   ScrollTrigger.refresh();
 });
+
+
+
+<!-- hero stuff -->
+
+overlay has a bg of black and the preloader sits uontop of it
+inside there are two canvas a background and foreground. 
+the background is used during the preloading and the foreground is used to set the background image after preloaded
+
+
