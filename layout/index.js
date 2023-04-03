@@ -3,7 +3,7 @@ import { useStore } from "lib/store.js"
 import gsap from "gsap"
 import CustomHead from 'components/custom-head'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
-
+import Header from "components/header"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,14 +62,15 @@ export default function Layout({ children, seo="" }) {
 					<div className="{cn(s.layout, className)}">
 						{/* preloader */}
 						{/* <Cursor /> */}
-						<main className="{s.main}" data-scroll-container ref={mainRef}>
+						<div className="main__container">
+							<Header />
+							<main className="{s.main}" data-scroll-container ref={mainRef}>
 								{children}
-						</main>  
+							</main> 
+						</div>	 
 					</div>
+				</div>
 			</div>
-			
-			
-		</div>
 	)
   }
   

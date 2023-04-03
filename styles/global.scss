@@ -9,11 +9,14 @@
 @import './_scroll.scss';
 
 :root {
-  --header-height: #{mobile-vw(58px)};
+  --header-height: 100vh;
+  --header-width: 3.75rem;
 
   
   @include desktop {
-    --header-height: #{desktop-vw(98px)};
+    --header-height: 100vh;
+    --header-width: 3.75rem;
+    --section-pad-y: calc(var(--vh)*3.7);
   }
 }
 

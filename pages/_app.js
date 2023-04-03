@@ -1,5 +1,14 @@
 import 'styles/global.scss'
+import RealViewport from '@/components/real-viewport'
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }) {
+  
+  return (
+    <>
+      <RealViewport />
+      <Component {...pageProps} />
+    </>
+  )
 }
+ 
+export default MyApp

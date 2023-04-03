@@ -1,0 +1,111 @@
+@import 'styles/_functions';
+
+.header{
+    @include desktop{
+        position: fixed;
+        z-index: 10;
+        width: var(--header-width);
+        height: var(--header-height);
+    }
+}
+
+.header__wrap{
+    @include desktop{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--section-pad-y) 0;
+    }
+    width: 100%;
+    height: 100%;
+    transition: background-color .5s;
+    transition-delay: 0s;
+    transition-timing-function: cubic-bezier(.76,0,.24,1);
+    background-color: transparent;
+
+}
+
+.header__logo{
+    @include desktop{
+        width: 2.5rem;
+        height: auto;
+    }
+    position: relative;
+    span{
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+}
+
+.header__mobile{
+    @include desktop{
+        display: none;
+    }
+    position: relative;
+}
+
+.header__burger{
+    @include desktop{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+.burger__button{
+    @include desktop{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 4rem;
+        overflow: hidden;
+    }
+}
+
+.burger__button__main{
+    display: flex;
+    align-items: center;
+    @include desktop{
+        span{
+            border: 1px solid black;
+            margin-right: 0.5rem;
+            height: 4rem;
+        }
+    }
+}
+
+.burger__button__aux{
+    display: flex;
+    align-items: center;
+    @include desktop{
+        span{
+            border: 1px solid black;
+            margin-right: 0.5rem;
+            height: 4rem;
+        }
+    }
+}
+
+.booking__now{
+    @include desktop{
+        position: absolute;
+        top: 85%;
+        left: -70%;
+        // height: 4rem;
+        width: 8rem;
+        transform: translate(-50%,-50%);
+        transform: rotate(-90deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h3{
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: 100;
+        }
+    }
+}
