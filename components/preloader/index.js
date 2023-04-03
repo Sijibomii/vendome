@@ -61,12 +61,21 @@ export default function Preloader ({}){
             x: 0,
         }, 2.5)
 
+        const width = window.innerWidth
+        const height = window.innerHeight
+
         timeline.to(fifth.current, {
-            scale: 4.5,
+            height,
+            width,
+            margin: 0,
+            left: 0,
+            top: 0,
             y: -10,
             transform: "rotate(0deg)",
-            duration: 1.5
-        }, 2.8)
+            duration: 2
+        }, 3)
+
+        // make preloader opacity become zero and display image in canvas and widen it 
 
     },[])
     
