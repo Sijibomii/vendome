@@ -2,11 +2,12 @@ import s from './preloader.module.scss'
 import cn from "clsx"
 import gsap from "gsap"
 import { useEffect, useRef } from 'react'
-// import useMultiRefs from 'utils/multiRef'
+import {init} from '@/utils/th'
 
 export default function Preloader ({}){
     // const [leftRefs, addLeftRefs] = useMultiRefs()
     // const [rightRefs, addRightRefs] = useMultiRefs()
+    const preloader = useRef()
     const first = useRef()
     const second = useRef()
     const third = useRef()
@@ -15,6 +16,7 @@ export default function Preloader ({}){
     // const right = rightRefs()
     useEffect(()=>{
         // const left = leftRefs()
+        init();
         const timeline = gsap.timeline()
         timeline.fromTo(first.current, {
             y: 900,
@@ -74,14 +76,20 @@ export default function Preloader ({}){
             transform: "rotate(0deg)",
             duration: 2
         }, 3)
-
+       
+        timeline.to(preloader.current, {
+            opacity: 0,
+            visibility: "hidden"
+        })
         // make preloader opacity become zero and display image in canvas and widen it 
+        // timeline.to(".background", {
 
+        // })
     },[])
     
 
     return(
-        <div className={s.preloader}>
+        <div className={s.preloader} ref={preloader}>
             <div className={s.preloader__wrap}>
                 <div className={s.preloader__logo}>
                 <svg width="311" height="120" viewBox="0 0 311 120" fill="none" xmlns="http://www.w3.org/2000/svg">

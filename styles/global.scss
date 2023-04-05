@@ -91,3 +91,8 @@ svg.icon {
   --gradient-width: 0px!important;
 }
 // main{display: none!important;}
+
+//  canvas
+canvas{
+  z-index: 1;
+}
