@@ -2,28 +2,41 @@
 import * as THREE from 'three';
 import s from 'img/vendome.jpg'
 
-function init(){
+const delay = ms => new Promise(res => setTimeout(res, ms));
+
+async function init(){
+    
     const canvas = document.querySelector('.foreground')
     // create a scene
     const scene = new THREE.Scene();
     // create a camera
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000 );
     // create geometry
-    const geometry = new THREE.PlaneGeometry(window.innerWidth/2, window.innerHeight/2);
+    // const geometry = new THREE.PlaneGeometry(window.innerWidth/2, window.innerHeight/2);
+    const geometry = new THREE.PlaneGeometry(15, 8);
     // create texture loader
 
-    const textureLoader = new THREE.TextureLoader()
-    console.log(s)
-    const colorTexture = textureLoader.load(s.src)
-    console.log(colorTexture)
+    // const textureLoader = new THREE.TextureLoader()
+    // const texture = textureLoader.load(`vendome.jpg`)
+    const image = new Image()
+    const texture = new THREE.Texture(image)
+
+    image.onload = async () =>{
+        
+        texture.needsUpdate = true
+    }
+
+    image.src = '/vendome.jpg'
+
+    // the issue here is that the onload is been called before the image actually becomes loaded so the texture ends up not been loaded
+    // this delay is to mitigate that
+    await delay(2000);
+    texture.needsUpdate = true
     // create mesh
-    const material = new THREE.MeshBasicMaterial(
-        // { color: 0xff0000 },
-        { map: colorTexture }
-        )
+    const material = new THREE.MeshBasicMaterial( { map: texture, alphaMap: texture })
     const mesh = new THREE.Mesh(geometry, material)
     
-    camera.position.z = 1
+    camera.position.z = 5
     
     scene.add(mesh)
     scene.add(camera)
