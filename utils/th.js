@@ -12,7 +12,8 @@ async function init(){
     // create a camera
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000 );
     // create geometry
-    // const geometry = new THREE.PlaneGeometry(window.innerWidth/2, window.innerHeight/2);
+
+    // TODO:get screen ratio from canvas
     const geometry = new THREE.PlaneGeometry(15, 8);
     // create texture loader
 
@@ -30,7 +31,7 @@ async function init(){
 
     // the issue here is that the onload is been called before the image actually becomes loaded so the texture ends up not been loaded
     // this delay is to mitigate that
-    await delay(2000);
+    await delay(1000);
     texture.needsUpdate = true
     // create mesh
     const material = new THREE.MeshBasicMaterial( { map: texture, alphaMap: texture })

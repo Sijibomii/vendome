@@ -6,7 +6,19 @@
         z-index: 10;
         width: var(--header-width);
         height: var(--header-height);
+
     }
+}
+
+.header::after{
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: black;
+    top: var(--section-pad-y);
+    left: 100%;
+    width: 2px;
+    height: calc(100% - var(--section-pad-y)*2);
 }
 
 .header__wrap{
@@ -50,8 +62,8 @@
 .header__burger{
     @include desktop{
         position: absolute;
-        top: 50%;
-        left: 50%;
+        top: 51%;
+        left: 51%;
         transform: translate(-50%,-50%);
     }
 }
@@ -72,7 +84,7 @@
     @include desktop{
         span{
             border: 1px solid black;
-            margin-right: 0.5rem;
+            margin-right: 0.3rem;
             height: 4rem;
         }
     }
@@ -93,10 +105,10 @@
 .booking__now{
     @include desktop{
         position: absolute;
-        top: 85%;
-        left: -70%;
+        top: 88%;
+        left: -92%;
         // height: 4rem;
-        width: 8rem;
+        width: 11rem;
         transform: translate(-50%,-50%);
         transform: rotate(-90deg);
         display: flex;
@@ -104,8 +116,21 @@
         justify-content: center;
         h3{
             text-transform: uppercase;
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 100;
         }
+    }
+}
+
+.header__menu__line{
+    @include desktop{
+        position: absolute;
+        top: var(--section-pad-y);
+        left: calc(100% + 4px);
+        width: 1px;
+        // subtract padding on both sides
+        height: calc(100% - var(--section-pad-y)*2);
+        background-color: black;
+        z-index: 1; 
     }
 }
