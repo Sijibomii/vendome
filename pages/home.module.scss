@@ -60,6 +60,7 @@
         z-index: 3;
         grid-template-columns: repeat(12, 8.6rem);
         grid-template-rows: repeat(12,8.33333%);
+        position: relative;
     }
 }
 
@@ -116,3 +117,84 @@
         }
     }
 }
+.home__hero__marquee{
+    height: calc(var(--vh)*100 - var(--section-pad-y)*2);
+    width: calc(var(--vh)*100 - var(--section-pad-y)*2)
+    calc(var(--vh)*100 - var(--section-pad-y)*2);
+    position: absolute;
+    top: var(--section-pad-y);
+    width: 3.125rem;
+    // height: var(--height);
+    right: 0;;
+    transition: opacity 1s;
+    transition-delay: 0s;
+    transition-timing-function: cubic-bezier(.76,0,.24,1);
+    // ont-family: Boutique;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+    transform: rotate(-90deg);
+    z-index: 10;
+}
+
+.home__hero__marquee__wrap{
+    position: absolute;
+    top: 39.5%;
+    left: 50%;
+    width: 96vh;
+    align-self: center;
+    transform: translate(-50%,-50%);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+    height: 53px;//130vh;//calc(var(--vh)*100 - var(--section-pad-y)*2);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 1rem 0rem;
+}
+
+.marquee__scroll__down__span{
+    margin-left: 1.7rem;
+}
+
+.home__hero__services{
+    @include desktop{
+        position: absolute;
+        height: 167px;
+        width: 167px;
+        display: flex;
+        align-items: center;
+        border-radius: 100%;
+        grid-column-start: 12;
+        grid-column-end: 12;
+        grid-row-start: 6;
+        grid-row-end:  7;
+        margin-left: -3.5rem;
+        margin-top: -0.5rem;
+        border: 1px solid black;
+    }
+}
+
+.home__hero__services__inner{
+    @include desktop{
+        background-color: black;
+        height: 147px;
+        width: 147px;
+        border-radius: 100%;
+        margin-left: 0.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0rem 1rem;
+        text-align: center;
+        span{
+            color: white;
+            text-transform: uppercase;
+            display:inline-block;
+            text-align: center;
+        }
+    }
+}
+

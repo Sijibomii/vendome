@@ -1,7 +1,6 @@
 import Layout from "@/layout"
 import s from "./home.module.scss"
-import Image from 'next/image'
-import d from 'img/vendome.jpg'
+import Marquee from "@/components/marquee"
 
 export default function Home() {
   return (
@@ -18,6 +17,27 @@ export default function Home() {
 
         <div className={s.hero__intro__container}>
           {/* marquee */}
+          <div className={s.home__hero__marquee}>
+            <div className={s.home__hero__marquee__wrap}>
+              <Marquee className={s.marquee} speed={3}>
+                <span className={s.marquee__scroll__down__span}>scroll down</span>
+                <span className={s.marquee__scroll__down__span}>scroll down</span>
+                <span className={s.marquee__scroll__down__span}>scroll down</span>
+                <span className={s.marquee__scroll__down__span}>scroll down</span>
+                <span className={s.marquee__scroll__down__span}>scroll down</span>
+              </Marquee>
+            </div>
+          </div>
+
+          <div className={s.home__hero__services}>
+            <div className={s.home__hero__services__inner}>
+              <p>
+                <span>Our</span>
+                <br />
+                <span>services</span>
+              </p>
+            </div>
+          </div>
           
           <div className={s.hero__title}>
             <h2>
