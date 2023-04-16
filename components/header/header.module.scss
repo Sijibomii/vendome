@@ -6,7 +6,8 @@
         z-index: 10;
         width: var(--header-width);
         height: var(--header-height);
-
+        // animate when scrolled past a level
+        background-color: #F2F0EA;
     }
 }
 

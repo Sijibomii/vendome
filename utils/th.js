@@ -1,6 +1,5 @@
 // threejs init
 import * as THREE from 'three';
-import s from 'img/vendome.jpg'
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
