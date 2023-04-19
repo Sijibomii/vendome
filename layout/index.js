@@ -5,7 +5,7 @@ import CustomHead from 'components/custom-head'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import Header from "components/header"
 import Preloader from "components/preloader"
-
+import s from './layout.module.scss'
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Layout({ children, seo="" }) {
@@ -24,9 +24,12 @@ export default function Layout({ children, seo="" }) {
 						direction: 'horizontal'
 					})
 						setLocomotive(scroller)
-						
+						console.log(document.querySelector('[data-scroll-container]').scrollWidth - window.innerWidth)
 						scroller.on("scroll", ScrollTrigger.update);
-
+						scroller.on("scroll", (args)=>{
+							console.log(args.scroll)
+							
+						})
 						ScrollTrigger.scrollerProxy(mainRef.current, {
 							// setter
 							// scrollTop(value) {
@@ -60,9 +63,7 @@ export default function Layout({ children, seo="" }) {
 							let pinWrap = document.querySelector(".pin-wrap");
 							// scroll with including all hidden from viewport
 							let pinWrapHeight= pinWrap.offsetHeight;
-							// console.log(pinWrapWidth)
-							// console.log(pinWrap.scrollWidth)
-							// console.log(window.innerWidth)
+							
 							let verticalScrollLength = pinWrapHeight - window.innerHeight;
 						  
 							// Pinning and horizontal scrolling
@@ -92,7 +93,7 @@ export default function Layout({ children, seo="" }) {
 							ScrollTrigger.refresh();
 						  }
 
-						//   init();
+						  init();
 
 						} catch (error) {
 							throw Error(`[SmoothScrollProvider]: ${error}`)
@@ -106,15 +107,16 @@ export default function Layout({ children, seo="" }) {
 	
 	return (
 			<div className="">
-				<div className="{s.body}">
+				<div className="">
 					<CustomHead {...seo} />
-					<div className="{cn(s.layout, className)}">
+					<div className="">
 						{/* preloader */}
 						<Preloader />
 						{/* <Cursor /> */}
-						<div className="main__container">
+					
+						<div className={s.main__container}>
 							<Header />
-							<main className="{s.main}" data-scroll-container ref={mainRef}>
+							<main className={s.main} data-scroll-container ref={mainRef}>
 								{children}
 							</main> 
 						</div>	 

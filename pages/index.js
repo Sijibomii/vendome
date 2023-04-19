@@ -1,12 +1,12 @@
 import Layout from "@/layout"
 import s from "./home.module.scss"
 import Marquee from "@/components/marquee"
-
+import Gallery from '@/components/gallery'
 export default function Home() {
   return (
     <Layout>
       {/* horizontal scroll section */}
-      <div className={s.horizontal__scroll}>
+      <div className={s.horizontal__scroll} data-horizontal-scroll-container>
         {/* hero- section-1 */}
         <div className={s.hero}>
             <div className={s.hero__intro__bg}>
@@ -123,6 +123,95 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* section 3 */}
+          <div className={s.video__display}>
+            <div className={s.video__display__inner}>
+              <div className={s.video__display__inner__top}>
+                <p className={s.video__display__inner__top__paragraph}>
+                  <span>Here</span>
+                  <br />
+                  <span>you are</span>
+                  <br />
+                  <span>invited to savor</span>
+                  <br />
+                  <span>the rituals</span>
+                  <br />
+                  <span>of french beauty</span>
+                  <br />
+                  <span>and wellness</span>
+                </p>
+              </div>
+
+              <div className={s.video__display__inner__bottom}>
+                <figure className={s.video__display__inner__bottom__media}>
+                  <img src="/vendome_1.png"/>
+                </figure>
+            </div>
+            <p className={s.video__display__inner__paragraph}>
+                  <span>watch</span>
+                  <br />
+                  <span>our</span>
+                  <br />
+                  <span>showreel</span>
+                  <br />
+                  <span>2021</span>
+                </p>
+              </div>
+          </div>
+
+          <div className={s.gallery}>
+            <div className={s.gallery__inner}>
+              <p className={s.gallery__text}>
+                <span>gal</span>
+                <br />
+                <span>lery</span>
+              </p>
+
+              <p className={s.model__text}>
+                <span>Mod</span>
+                <br />
+                <span>els</span>
+              </p>
+
+              <div className={s.gallery__media__container}>
+                <figure className={s.gallery__media}>
+                  <img src="/vendome_2.jpg"/>
+                </figure>
+            </div>
+            </div>
+          </div>
+
+          {/* IMAGE GALLERY */}
+          <div className={s.gallery__outer}>
+            <Gallery speed={2} images={['https://vendomeclinique.com//assets/components/phpthumbof/cache/c305a6d3894062fa212f76b3570611e4.f15d86ecaff40a0cc632f3a01a032b1b.jpg?r=0.06825848080813546', 'https://vendomeclinique.com//assets/components/phpthumbof/cache/f0c9c7bb9d321febb1a9ad7fafdaf936.f15d86ecaff40a0cc632f3a01a032b1b.jpg?r=0.7006175267808117', 'https://vendomeclinique.com//assets/components/phpthumbof/cache/c305a6d3894062fa212f76b3570611e4.f15d86ecaff40a0cc632f3a01a032b1b.jpg?r=0.17599756232213037']}/>
+            <Gallery speed={-2} images={['https://vendomeclinique.com//assets/components/phpthumbof/cache/b7951f3c93ee97f897c359928746a759.f15d86ecaff40a0cc632f3a01a032b1b.jpg?r=0.0855450088630414', 'https://vendomeclinique.com//assets/components/phpthumbof/cache/92abc162d645646c0a2979641eb7ac0c.f15d86ecaff40a0cc632f3a01a032b1b.jpg?r=0.3624436129492543', 'https://vendomeclinique.com//assets/components/phpthumbof/cache/b7951f3c93ee97f897c359928746a759.f15d86ecaff40a0cc632f3a01a032b1b.jpg?r=0.7228307650149668']}/>
+            <Gallery speed={2}images={['https://vendomeclinique.com//assets/components/phpthumbof/cache/cbe66c973c140705914989a817f5e5a6.f15d86ecaff40a0cc632f3a01a032b1b.jpg?r=0.027197466792913794', 'https://vendomeclinique.com//assets/components/phpthumbof/cache/aa18577ab39ae57d8c6097bb6990c6d1.f15d86ecaff40a0cc632f3a01a032b1b.jpg?r=0.6497169852637221', 'https://vendomeclinique.com//assets/components/phpthumbof/cache/cbe66c973c140705914989a817f5e5a6.f15d86ecaff40a0cc632f3a01a032b1b.jpg?r=0.918012058200852']}/>
+          </div> 
+
+          <div className={s.gallery}>
+            <div className={s.gallery__inner}>
+              <p className={s.gallery__text}>
+                <span>gal</span>
+                <br />
+                <span>lery</span>
+              </p>
+
+              <p className={s.model__text}>
+                <span>clini</span>
+                <br />
+                <span>que</span>
+              </p>
+
+              <div className={s.gallery__media__container}>
+                <figure className={s.gallery__media}>
+                  <img src="/vendome_3.jpg"/>
+                </figure>
+            </div>
+            </div>
+          </div>
+
+
       </div>
       {/* vertical part */}
       <div className="sectionPin">
