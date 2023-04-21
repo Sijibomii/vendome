@@ -5,7 +5,7 @@ import Link from 'next/link'
 export default function Header ({}) {
     return (
         <>
-            <header className={s.header}>
+            <header className={cn(s.header, 'header')}>
                 <div className={s.header__wrap}>
                     {/* Desktop logo */}
                     <div className={cn(s.header__logo)} translate="no">

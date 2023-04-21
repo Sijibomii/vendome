@@ -2,6 +2,8 @@ import Layout from "@/layout"
 import s from "./home.module.scss"
 import Marquee from "@/components/marquee"
 import Gallery from '@/components/gallery'
+import cn from "clsx"
+
 export default function Home() {
   return (
     <Layout>
@@ -211,12 +213,61 @@ export default function Home() {
             </div>
           </div>
 
+          {/* IMAGE GALLERY */}
+          <div className={cn(s.gallery__outer ,'gallery__outer')}>
+            <Gallery speed={2} images={['https://vendomeclinique.com//assets/components/phpthumbof/cache/bda27186c0eef7f1909bf0a43217906c.f15d86ecaff40a0cc632f3a01a032b1b.jpg?r=0.06531114454943143', 'https://vendomeclinique.com//assets/components/phpthumbof/cache/0dd94c1b1d989f937ff450bf20256cd5.f15d86ecaff40a0cc632f3a01a032b1b.jpg?r=0.17640993096781865', 'https://vendomeclinique.com//assets/components/phpthumbof/cache/bda27186c0eef7f1909bf0a43217906c.f15d86ecaff40a0cc632f3a01a032b1b.jpg?r=0.8673889504791934']}/>
+            <Gallery speed={-2} images={['https://vendomeclinique.com//assets/components/phpthumbof/cache/53e5af2172c2bf209999d22d13395d55.f15d86ecaff40a0cc632f3a01a032b1b.jpg?r=0.9389781967121982', 'https://vendomeclinique.com//assets/components/phpthumbof/cache/cbe43957647b13e2d46fa4788f9131bc.f15d86ecaff40a0cc632f3a01a032b1b.jpg?r=0.016785998890232134', 'https://vendomeclinique.com//assets/components/phpthumbof/cache/53e5af2172c2bf209999d22d13395d55.f15d86ecaff40a0cc632f3a01a032b1b.jpg?r=0.7491963263161723']}/>
+            <Gallery speed={2}images={['https://vendomeclinique.com//assets/components/phpthumbof/cache/95fb5c5fa0f8005c1449d1c96cab6a61.f15d86ecaff40a0cc632f3a01a032b1b.jpg?r=0.7403252152779141', 'https://vendomeclinique.com//assets/components/phpthumbof/cache/95fb5c5fa0f8005c1449d1c96cab6a61.f15d86ecaff40a0cc632f3a01a032b1b.jpg?r=0.7403252152779141', 'https://vendomeclinique.com//assets/components/phpthumbof/cache/95fb5c5fa0f8005c1449d1c96cab6a61.f15d86ecaff40a0cc632f3a01a032b1b.jpg?r=0.5701928290774061']}/>
+          </div> 
 
       </div>
       {/* vertical part */}
-      <div className="sectionPin">
+      <div className="sectionPin" data-vertical-scroll-container>
         <div className="pin-wrap">
-          
+            <div className={s.fullpage}>
+              <div className={s.fullpage__hero}>
+                <div className={s.fullpage__hero__text}>
+                  <h2 className={s.fullpage__hero__text__heading}>
+                    <span>vendome</span>
+                    <br />
+                    <span>Clinique & spa</span>
+                    <br />
+                    <span>we delight</span>
+                    <br />
+                    <span>in the rituals</span>
+                    <br />
+                    <span>of french beauty</span>
+                    <br />
+                    <span>and wellness</span>
+                  </h2>
+                </div>
+                <div className={s.fullpage__hero__list}>
+                  <ul>
+                    <li><h3>all</h3></li>
+                    <li><h3>/ spa</h3></li>
+                    <li><h3>/ packages</h3></li>
+                    <li><h3>/ beauty services</h3></li>
+                    <li><h3>/ medical</h3></li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* marquee */}
+              <Marquee className={s.fullpage__marquee} speed={205}>
+                <span className={s.fullpage__marquee__span}>spa</span>
+                <span className={s.fullpage__marquee__dash}></span>
+                <span className={s.fullpage__marquee__span}>spa</span>
+                <span className={s.fullpage__marquee__dash}></span>
+                <span className={s.fullpage__marquee__span}>spa</span>
+                <span className={s.fullpage__marquee__dash}></span>
+                <span className={s.fullpage__marquee__span}>spa</span>
+                <span className={s.fullpage__marquee__dash}></span>
+                <span className={s.fullpage__marquee__span}>spa</span>
+                <span className={s.fullpage__marquee__dash}></span>
+              </Marquee>
+
+              
+            </div>
         </div>
       </div>
     </Layout>
