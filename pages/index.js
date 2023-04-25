@@ -266,7 +266,96 @@ export default function Home() {
                 <span className={s.fullpage__marquee__dash}></span>
               </Marquee>
 
-              
+              <div className={s.fullpage__accord}>
+                <div className={s.fullpage__accord__inner}>
+
+                  <div className={s.fullpage__accord__item}>
+                    <div className={s.fullpage__accord__item__top}>
+                      <h3>facials</h3>
+                      <div className={s.fullpage__svg}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4z"/> </svg>
+                      </div>
+                    </div>
+                    <div className={s.fullpage__accord__item__bottom}></div>
+                  </div>
+
+                  <div className={s.fullpage__accord__item}>
+                    <div className={s.fullpage__accord__item__top}>
+                      <h3>Massage</h3>
+                      <div className={s.fullpage__svg}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4z"/> </svg>
+                      </div>
+                    </div>
+                    <div className={s.fullpage__accord__item__bottom}></div>
+                  </div>
+
+
+                  <div className={s.fullpage__accord__item}>
+                    <div className={s.fullpage__accord__item__top}>
+                      <h3>body</h3>
+                      <div className={s.fullpage__svg}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4z"/> </svg>
+                      </div>
+                    </div>
+                    <div className={s.fullpage__accord__item__bottom}></div>
+                  </div>
+                </div>
+              </div>
+
+              <Marquee className={s.fullpage__marquee} speed={70}>
+                <span className={s.fullpage__marquee__span}>packages</span>
+                <span className={s.fullpage__marquee__dash}></span>
+                <span className={s.fullpage__marquee__span}>packages</span>
+                <span className={s.fullpage__marquee__dash}></span>
+                <span className={s.fullpage__marquee__span}>packages</span>
+                <span className={s.fullpage__marquee__dash}></span>
+                <span className={s.fullpage__marquee__span}>packages</span>
+                <span className={s.fullpage__marquee__dash}></span>
+                <span className={s.fullpage__marquee__span}>packages</span>
+                <span className={s.fullpage__marquee__dash}></span>
+              </Marquee>
+
+              <div className={s.details}>
+                <div className={s.details__inner}>
+                  <div className={s.details__item}>
+                    <div className={s.details__item__left}>
+                      <div className={s.details__index}>
+                        <h3>01</h3>
+                      </div>
+                      <div className={s.details__title}>
+                        <p>
+                          <span>wrappedinluxury</span>
+                          <br />
+                          <span>90min</span>
+                        </p>
+                      </div>
+                    
+                    </div>
+
+                    <div className={s.details__item__right}>
+                      <div className={s.details__paragraph}>
+                          <p>
+                            <span>Nature's gifts combine to exfoliate, detoxify, hydrate and replenish in</span>
+                            <br />
+                            <span>this combination of Scrub a Sel, Swedish Massage and Organic</span>
+                            <br />
+                            <span>Essential Oil Wrap, leaving body smooth, luminous and refreshed. 30</span>
+                            <br />
+                            <span>MIN Scrub | 30 MIN Massage | 60 MIN Essential Oil Wrap</span>
+                          </p>
+
+                          {/* show on hover */}
+                          <div className={s.details__order__button}>
+                          <a className={s.details__order__button__inner}>
+                            <h3>order now</h3>  
+                          </a>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>  
+              </div>
+
             </div>
         </div>
       </div>
